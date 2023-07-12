@@ -59,7 +59,6 @@ public class SendingFileThread implements Runnable {
             while((count = bis.read(buffer)) > 0){
                 percent = percent + count;
                 int p = (percent / filesize);
-               
                 form.updateProgress(p);
                 output.write(buffer, 0, count);
             }

@@ -78,7 +78,7 @@ public class ClientThread implements Runnable{
                                 dos.writeUTF(format);
                                 
                                 /*  hàm này sẽ tạo một socket filesharing  để tạo một luồng xử lý file đi vào và socket này sẽ tự động đóng khi hoàn thành.  */
-                                Socket fSoc = new Socket(main.getMyHost(), main.getMyPort());
+                                Socket fSoc = new Socket("localhost", 3333);
                                 DataOutputStream fdos = new DataOutputStream(fSoc.getOutputStream());
                                 fdos.writeUTF("CMD_SHARINGSOCKET "+ main.getMyUsername());
                                 /*  Run Thread for this   */

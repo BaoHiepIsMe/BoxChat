@@ -1,26 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package Server;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- *
- * @author hanhhoatranthi
- */
+import Dao.Dao;
 public class ServerThread implements Runnable {
-    
+    Dao dao;
     ServerSocket server;
     MainForm main;
     boolean keepGoing = true;
     
     public ServerThread(int port, MainForm main){
+    	dao = new Dao();
         main.appendMessage("[Server]: Máy Chủ hiện đang khởi động ở port "+ port);
         try {
             this.main = main;

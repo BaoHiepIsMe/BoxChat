@@ -11,6 +11,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 import Client.MainForm;
+import java.awt.Color;
 
 
 public class SendFile extends javax.swing.JFrame {
@@ -31,6 +32,7 @@ public class SendFile extends javax.swing.JFrame {
      // Tạo một form SendFile
      
     public SendFile() {
+    	getContentPane().setBackground(Color.ORANGE);
         initComponents();
         MyInit();
         progressbar.setVisible(false);
@@ -167,7 +169,7 @@ public class SendFile extends javax.swing.JFrame {
             }
         });
 
-        btnBrowse.setBackground(new java.awt.Color(255, 153, 153));
+        btnBrowse.setBackground(Color.ORANGE);
         btnBrowse.setForeground(new java.awt.Color(0, 0, 0));
         btnBrowse.setText("Tìm File");
         btnBrowse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -181,7 +183,7 @@ public class SendFile extends javax.swing.JFrame {
 
         progressbar.setStringPainted(true);
 
-        btnSendFile.setBackground(new java.awt.Color(255, 153, 153));
+        btnSendFile.setBackground(Color.ORANGE);
         btnSendFile.setForeground(new java.awt.Color(0, 0, 0));
         btnSendFile.setText("Gửi File");
         btnSendFile.addActionListener(new java.awt.event.ActionListener() {
